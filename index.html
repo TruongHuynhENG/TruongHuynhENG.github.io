@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIA</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Data Analysis - AI Project</h1>
+        <input type="text" id="projectName" placeholder="Project name (3DC_WD_Z)" style="width:39%; padding:10px; margin-bottom:15px; font-size:16px;"/>
+
+        <textarea id="inputData" placeholder="Data (label1:10,label2:20)"></textarea>
+        <button id="processBtn">Process</button>
+        <button id="saveBtn">Save Excel</button>
+        <button id="printBtn">Print</button>
+        
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>English Labels</th>
+                    <th>Quantity (PCS)</th>
+                    <th>Vietnamese Labels</th>
+                    <th>Note</th>
+                    <th>Remaining Quantity (PCS)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dữ liệu sẽ được thêm vào đây -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer style="text-align:center; margin-top:50px; font-size:14px; color:black;">
+    Developed by Truong Huynh – Innovative Solutions for AI & Automation
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f3f0;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02); /* Tăng kích thước nhẹ khi hover */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    font-size: 48px;
+    color: #000000; /* Màu chữ: đen */
+    text-shadow: none; /* Bỏ hiệu ứng đổ bóng */
+    opacity: 0;
+    animation: fadeIn 3s forwards, glow 2s infinite alternate;
+    position: relative;
+    letter-spacing: 0.1em; /* Khoảng cách giữa các chữ */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: none; /* Bỏ hiệu ứng đổ bóng ở trạng thái đầu */
+    }
+    100% {
+        text-shadow: none; /* Bỏ hiệu ứng đổ bóng ở trạng thái cuối */
+    }
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Hiệu ứng khi người dùng tương tác */
+}
+
+textarea:focus {
+    background-color: #e8f0fe; /* Thay đổi màu nền khi focus */
+}
+
+button {
+    margin: 8px;
+    padding: 12px 20px;
+    border: none;
+    background-color: #0d24d6;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Thêm hiệu ứng chuyển động */
+}
+
+button:hover {
+    background-color: #0d24d6;
+    transform: scale(1.05); /* Tăng kích thước nút khi hover */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    opacity: 0; /* Bắt đầu với bảng ẩn */
+    animation: fadeInTable 1s forwards; /* Hiệu ứng fade-in cho bảng */
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền khi dữ liệu thay đổi */
+}
+
+.red {
+    background-color: red;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.yellow {
+    background-color: yellow;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+/* Animation cho h1 */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Animation cho bảng */
+@keyframes fadeInTable {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
